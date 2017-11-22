@@ -1,0 +1,66 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname balloon-lab-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
+(require 2htdp/image)
+(require 2htdp/universe)
+
+; Balloon popping
+
+;; CONSTANTS ==========================
+
+(define WIDTH 500)
+(define HEIGHT 500)
+(define MTS (empty-scene WIDTH HEIGHT))
+
+(define BALLOON-COLOUR "red")
+(define POP-IMAGE (overlay (text "POP!" 80 "black")
+                           (radial-star 30 (/ WIDTH 10) (/ WIDTH 2) "solid" "yellow")))
+
+(define CTR-X (/ WIDTH 2))
+(define CTR-Y (/ HEIGHT 2))
+
+(define SPEED 2)
+
+(define MAX-SIZE (/ WIDTH 2))
+
+
+
+
+
+;; DATA DEFINITIONS ============================
+
+
+;; Balloon is ...
+
+
+
+
+
+
+
+;; FUNCTIONS ====================================
+
+;; Balloon -> Balloon
+;; starts the world program with !!!
+; no examples for main function
+
+(define (main b)
+  (big-bang b
+            (on-tick tick)
+            (to-draw render)))
+
+
+
+;; Balloon -> Balloon
+;; expands the balloon by SPEED, until it is popped
+; !!!
+(define (tick b) b)
+
+
+
+
+;; Balloon -> Image
+;; draws the balloon of given size onto the MTS, unless popped
+; !!!
+(define (render b) MTS)
+
